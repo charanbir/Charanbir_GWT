@@ -1,0 +1,2 @@
+# Module Charanbir_GWT
+# RPC service class, partial path of RPC policy file

@@ -1,0 +1,19 @@
+<project name="Charanbir_GWT" basedir="." default="default">
+
+	<target name="default" depends="buildwar,deploy"></target>
+
+	<target name="buildwar">
+		<war basedir="war" destfile="Charanbir_GWT.war" webxml="war/WEB-INF/web.xml">
+			<exclude name="WEB-INF/**" />
+			<webinf dir="war/WEB-INF/">
+				<include name="**/**" />
+			</webinf>
+			<fileset dir="./src" includes="**/*.java,**/*.xml"/>
+		</war>		
+	</target>
+
+	<target name="deploy">
+		<copy file="Charanbir_GWT.war" todir="." />
+	</target>
+
+</project>
